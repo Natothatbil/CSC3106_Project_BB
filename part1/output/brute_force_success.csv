@@ -1,0 +1,2 @@
+source_ip,username,failed_attempts_in_burst,distinct_usernames_in_burst,burst_start,success_time,burst_span_seconds
+203.0.113.77,deploy,117,1,2026-07-11T23:13:00,2026-07-11T23:47:04,2034

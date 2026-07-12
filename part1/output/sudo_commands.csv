@@ -1,0 +1,293 @@
+timestamp,user,target_user,command
+2026-07-06T00:32:49,ben,root,/usr/bin/journalctl -n 50
+2026-07-06T01:11:57,ben,root,/usr/bin/systemctl restart apache2
+2026-07-06T01:43:17,ops,root,/usr/bin/apt update
+2026-07-06T03:02:17,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-06T03:59:01,deploy,root,/usr/bin/du -sh /var/log
+2026-07-06T03:59:23,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-06T04:11:01,deploy,root,/usr/bin/du -sh /var/log
+2026-07-06T06:30:40,ben,root,/usr/bin/systemctl status ssh
+2026-07-06T08:07:45,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-06T08:16:57,ops,root,/usr/bin/apt update
+2026-07-06T08:18:34,deploy,root,/usr/bin/apt update
+2026-07-06T08:43:50,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-06T09:15:55,ben,root,/usr/bin/du -sh /var/log
+2026-07-06T09:44:24,alice,root,/usr/bin/apt update
+2026-07-06T09:50:20,ops,root,/usr/bin/apt update
+2026-07-06T10:34:55,alice,root,/usr/bin/systemctl status ssh
+2026-07-06T10:43:33,deploy,root,/usr/bin/systemctl status ssh
+2026-07-06T11:41:04,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-06T11:51:03,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-06T11:58:28,deploy,root,/usr/bin/journalctl -n 50
+2026-07-06T13:13:08,deploy,root,/usr/bin/du -sh /var/log
+2026-07-06T13:17:22,ben,root,/usr/bin/du -sh /var/log
+2026-07-06T14:14:07,webadmin,root,/usr/bin/apt update
+2026-07-06T14:28:08,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-06T14:38:47,deploy,root,/usr/bin/systemctl status ssh
+2026-07-06T15:07:47,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-06T15:10:36,deploy,root,/usr/bin/journalctl -n 50
+2026-07-06T15:25:23,ben,root,/usr/bin/systemctl status ssh
+2026-07-06T15:45:41,alice,root,/usr/bin/apt update
+2026-07-06T15:49:47,ben,root,/usr/bin/du -sh /var/log
+2026-07-06T16:06:16,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-06T16:52:11,ops,root,/usr/bin/systemctl status ssh
+2026-07-06T17:09:55,deploy,root,/usr/bin/systemctl status ssh
+2026-07-06T17:26:18,deploy,root,/usr/bin/apt update
+2026-07-06T17:38:57,ben,root,/usr/bin/du -sh /var/log
+2026-07-06T17:39:55,deploy,root,/usr/bin/systemctl status ssh
+2026-07-06T17:49:57,alice,root,/usr/bin/systemctl status ssh
+2026-07-06T18:54:12,alice,root,/usr/bin/journalctl -n 50
+2026-07-06T19:35:01,ops,root,/usr/bin/systemctl restart apache2
+2026-07-06T20:59:11,ben,root,/usr/bin/systemctl restart apache2
+2026-07-06T21:04:13,j.maguire,root,/usr/bin/apt update
+2026-07-06T21:16:29,deploy,root,/usr/bin/du -sh /var/log
+2026-07-06T23:40:15,ben,root,/usr/bin/systemctl restart apache2
+2026-07-07T01:13:04,ops,root,/usr/bin/systemctl restart apache2
+2026-07-07T01:32:36,ops,root,/usr/bin/apt update
+2026-07-07T02:45:45,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-07T04:00:01,deploy,root,/usr/bin/journalctl -n 50
+2026-07-07T09:26:33,deploy,root,/usr/bin/du -sh /var/log
+2026-07-07T09:43:31,ben,root,/usr/bin/du -sh /var/log
+2026-07-07T10:01:17,ops,root,/usr/bin/journalctl -n 50
+2026-07-07T10:08:35,ben,root,/usr/bin/systemctl status ssh
+2026-07-07T10:11:18,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-07T10:26:05,alice,root,/usr/bin/apt update
+2026-07-07T10:30:10,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-07T10:39:49,ops,root,/usr/bin/apt update
+2026-07-07T10:42:15,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-07T10:48:16,ben,root,/usr/bin/apt update
+2026-07-07T11:08:49,ben,root,/usr/bin/journalctl -n 50
+2026-07-07T11:25:27,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-07T11:44:46,ben,root,/usr/bin/apt update
+2026-07-07T11:55:29,ops,root,/usr/bin/journalctl -n 50
+2026-07-07T12:09:11,ops,root,/usr/bin/journalctl -n 50
+2026-07-07T12:10:13,ben,root,/usr/bin/apt update
+2026-07-07T12:33:25,j.maguire,root,/usr/bin/apt update
+2026-07-07T12:37:26,ben,root,/usr/bin/systemctl restart apache2
+2026-07-07T13:21:13,alice,root,/usr/bin/apt update
+2026-07-07T14:09:32,ben,root,/usr/bin/du -sh /var/log
+2026-07-07T14:21:34,ops,root,/usr/bin/du -sh /var/log
+2026-07-07T14:59:42,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-07T15:01:41,ops,root,/usr/bin/systemctl restart apache2
+2026-07-07T16:02:58,ben,root,/usr/bin/apt update
+2026-07-07T16:17:41,deploy,root,/usr/bin/systemctl status ssh
+2026-07-07T16:52:29,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-07T16:52:57,alice,root,/usr/bin/systemctl restart apache2
+2026-07-07T16:54:00,ops,root,/usr/bin/systemctl restart apache2
+2026-07-07T16:56:19,deploy,root,/usr/bin/apt update
+2026-07-07T17:00:50,ops,root,/usr/bin/apt update
+2026-07-07T17:46:09,ben,root,/usr/bin/journalctl -n 50
+2026-07-07T17:48:58,ben,root,/usr/bin/systemctl status ssh
+2026-07-07T18:09:59,deploy,root,/usr/bin/apt update
+2026-07-07T18:14:08,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-07T18:46:37,ben,root,/usr/bin/apt update
+2026-07-07T18:54:43,ops,root,/usr/bin/apt update
+2026-07-07T21:07:58,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-08T00:01:52,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-08T02:41:54,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-08T04:47:04,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-08T07:08:40,deploy,root,/usr/bin/apt update
+2026-07-08T07:49:08,ops,root,/usr/bin/apt update
+2026-07-08T08:00:23,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-08T08:13:55,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-08T08:14:27,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-08T08:42:49,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-08T09:06:51,ben,root,/usr/bin/journalctl -n 50
+2026-07-08T09:57:23,ops,root,/usr/bin/du -sh /var/log
+2026-07-08T10:14:51,webadmin,root,/usr/bin/apt update
+2026-07-08T10:21:58,deploy,root,/usr/bin/journalctl -n 50
+2026-07-08T10:38:51,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-08T10:49:34,ops,root,/usr/bin/systemctl restart apache2
+2026-07-08T10:56:26,ben,root,/usr/bin/journalctl -n 50
+2026-07-08T11:10:34,j.maguire,root,/usr/bin/systemctl status ssh
+2026-07-08T11:26:59,ben,root,/usr/bin/du -sh /var/log
+2026-07-08T12:00:41,j.maguire,root,/usr/bin/apt update
+2026-07-08T12:24:14,ben,root,/usr/bin/systemctl status ssh
+2026-07-08T12:37:28,j.maguire,root,/usr/bin/apt update
+2026-07-08T12:50:14,ben,root,/usr/bin/apt update
+2026-07-08T13:03:48,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-08T14:14:34,ben,root,/usr/bin/apt update
+2026-07-08T14:33:28,j.maguire,root,/usr/bin/apt update
+2026-07-08T14:58:15,ben,root,/usr/bin/apt update
+2026-07-08T14:59:55,ben,root,/usr/bin/journalctl -n 50
+2026-07-08T15:01:07,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-08T15:15:54,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-08T15:30:57,alice,root,/usr/bin/systemctl restart apache2
+2026-07-08T15:46:56,deploy,root,/usr/bin/systemctl status ssh
+2026-07-08T15:53:44,ops,root,/usr/bin/systemctl restart apache2
+2026-07-08T15:55:59,deploy,root,/usr/bin/apt update
+2026-07-08T16:18:48,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-08T16:27:54,deploy,root,/usr/bin/systemctl status ssh
+2026-07-08T16:39:27,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-08T16:53:28,ben,root,/usr/bin/apt update
+2026-07-08T17:22:19,ben,root,/usr/bin/systemctl status ssh
+2026-07-08T18:27:28,ops,root,/usr/bin/systemctl restart apache2
+2026-07-08T18:55:32,ops,root,/usr/bin/apt update
+2026-07-08T21:09:09,j.maguire,root,/usr/bin/apt update
+2026-07-08T21:42:58,ben,root,/usr/bin/journalctl -n 50
+2026-07-08T21:45:56,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-08T23:05:37,alice,root,/usr/bin/systemctl restart apache2
+2026-07-09T00:14:31,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-09T03:44:04,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-09T04:17:33,alice,root,/usr/bin/journalctl -n 50
+2026-07-09T08:47:00,ops,root,/usr/bin/apt update
+2026-07-09T08:53:53,alice,root,/usr/bin/apt update
+2026-07-09T09:25:16,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-09T09:32:11,alice,root,/usr/bin/du -sh /var/log
+2026-07-09T09:41:07,webadmin,root,/usr/bin/apt update
+2026-07-09T09:48:17,deploy,root,/usr/bin/du -sh /var/log
+2026-07-09T09:48:27,ops,root,/usr/bin/journalctl -n 50
+2026-07-09T09:54:09,ops,root,/usr/bin/journalctl -n 50
+2026-07-09T10:08:05,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-09T10:22:00,ops,root,/usr/bin/systemctl restart apache2
+2026-07-09T10:27:55,ben,root,/usr/bin/systemctl status ssh
+2026-07-09T10:35:04,ben,root,/usr/bin/apt update
+2026-07-09T10:59:06,ben,root,/usr/bin/apt update
+2026-07-09T12:12:49,webadmin,root,/usr/bin/apt update
+2026-07-09T12:38:56,ops,root,/usr/bin/apt update
+2026-07-09T13:01:39,ops,root,/usr/bin/systemctl status ssh
+2026-07-09T13:08:31,ben,root,/usr/bin/systemctl status ssh
+2026-07-09T13:09:41,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-09T14:05:31,j.maguire,root,/usr/bin/systemctl status ssh
+2026-07-09T14:25:14,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-09T15:13:55,alice,root,/usr/bin/journalctl -n 50
+2026-07-09T15:22:33,ops,root,/usr/bin/apt update
+2026-07-09T15:22:50,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-09T15:31:41,webadmin,root,/usr/bin/apt update
+2026-07-09T15:45:16,alice,root,/usr/bin/apt update
+2026-07-09T15:56:11,ben,root,/usr/bin/journalctl -n 50
+2026-07-09T16:06:35,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-09T16:35:34,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-09T17:04:35,ben,root,/usr/bin/systemctl restart apache2
+2026-07-09T17:14:29,alice,root,/usr/bin/journalctl -n 50
+2026-07-09T17:33:23,ops,root,/usr/bin/journalctl -n 50
+2026-07-09T17:35:47,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-09T17:44:16,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-09T18:02:33,deploy,root,/usr/bin/systemctl status ssh
+2026-07-09T18:06:35,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-09T18:49:32,alice,root,/usr/bin/du -sh /var/log
+2026-07-09T20:52:58,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-09T21:49:59,alice,root,/usr/bin/systemctl restart apache2
+2026-07-09T22:46:10,deploy,root,/usr/bin/systemctl status ssh
+2026-07-09T23:56:27,alice,root,/usr/bin/apt update
+2026-07-10T01:30:48,alice,root,/usr/bin/apt update
+2026-07-10T02:39:15,deploy,root,/usr/bin/systemctl status ssh
+2026-07-10T06:01:08,deploy,root,/usr/bin/apt update
+2026-07-10T07:37:26,ben,root,/usr/bin/systemctl restart apache2
+2026-07-10T08:07:52,ben,root,/usr/bin/systemctl status ssh
+2026-07-10T08:10:13,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-10T08:23:12,j.maguire,root,/usr/bin/systemctl status ssh
+2026-07-10T08:32:44,deploy,root,/usr/bin/journalctl -n 50
+2026-07-10T08:55:41,ben,root,/usr/bin/journalctl -n 50
+2026-07-10T09:16:42,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-10T09:27:11,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-10T09:33:07,ben,root,/usr/bin/systemctl restart apache2
+2026-07-10T10:00:25,ben,root,/usr/bin/apt update
+2026-07-10T10:03:15,ops,root,/usr/bin/apt update
+2026-07-10T10:06:18,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-10T10:44:23,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-10T10:45:44,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-10T11:00:34,ops,root,/usr/bin/systemctl restart apache2
+2026-07-10T11:14:20,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-10T11:33:19,webadmin,root,/usr/bin/apt update
+2026-07-10T11:55:39,webadmin,root,/usr/bin/apt update
+2026-07-10T11:57:45,alice,root,/usr/bin/du -sh /var/log
+2026-07-10T12:01:35,alice,root,/usr/bin/apt update
+2026-07-10T12:20:43,ben,root,/usr/bin/journalctl -n 50
+2026-07-10T12:24:09,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-10T12:33:22,alice,root,/usr/bin/systemctl status ssh
+2026-07-10T12:58:33,alice,root,/usr/bin/apt update
+2026-07-10T12:59:17,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-10T13:31:24,ops,root,/usr/bin/systemctl restart apache2
+2026-07-10T13:35:22,ben,root,/usr/bin/du -sh /var/log
+2026-07-10T13:53:55,ops,root,/usr/bin/apt update
+2026-07-10T13:56:56,ben,root,/usr/bin/apt update
+2026-07-10T14:04:51,ops,root,/usr/bin/journalctl -n 50
+2026-07-10T14:16:48,alice,root,/usr/bin/du -sh /var/log
+2026-07-10T14:20:56,alice,root,/usr/bin/apt update
+2026-07-10T14:26:51,deploy,root,/usr/bin/du -sh /var/log
+2026-07-10T14:27:25,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-10T14:45:33,ben,root,/usr/bin/systemctl restart apache2
+2026-07-10T17:32:14,webadmin,root,/usr/bin/apt update
+2026-07-10T18:11:59,alice,root,/usr/bin/systemctl restart apache2
+2026-07-10T18:29:16,ben,root,/usr/bin/systemctl restart apache2
+2026-07-10T18:33:43,ops,root,/usr/bin/journalctl -n 50
+2026-07-10T18:34:00,ops,root,/usr/bin/systemctl restart apache2
+2026-07-10T20:23:42,j.maguire,root,/usr/bin/apt update
+2026-07-10T22:05:19,alice,root,/usr/bin/du -sh /var/log
+2026-07-10T22:06:11,ops,root,/usr/bin/du -sh /var/log
+2026-07-10T23:59:43,j.maguire,root,/usr/bin/systemctl status ssh
+2026-07-11T01:33:55,alice,root,/usr/bin/journalctl -n 50
+2026-07-11T02:41:22,ops,root,/usr/bin/systemctl status ssh
+2026-07-11T03:30:54,ben,root,/usr/bin/systemctl restart apache2
+2026-07-11T05:34:59,j.maguire,root,/usr/bin/apt update
+2026-07-11T08:10:58,ops,root,/usr/bin/du -sh /var/log
+2026-07-11T08:57:19,j.maguire,root,/usr/bin/apt update
+2026-07-11T09:40:47,ops,root,/usr/bin/apt update
+2026-07-11T10:10:19,ops,root,/usr/bin/apt update
+2026-07-11T10:20:10,ben,root,/usr/bin/apt update
+2026-07-11T10:22:30,deploy,root,/usr/bin/apt update
+2026-07-11T11:55:19,deploy,root,/usr/bin/systemctl status ssh
+2026-07-11T12:28:44,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-11T12:31:47,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-11T12:33:33,j.maguire,root,/usr/bin/du -sh /var/log
+2026-07-11T12:42:10,ops,root,/usr/bin/du -sh /var/log
+2026-07-11T12:56:30,alice,root,/usr/bin/systemctl restart apache2
+2026-07-11T13:01:25,webadmin,root,/usr/bin/systemctl restart apache2
+2026-07-11T13:27:13,webadmin,root,/usr/bin/systemctl status ssh
+2026-07-11T13:33:27,j.maguire,root,/usr/bin/apt update
+2026-07-11T13:36:25,ben,root,/usr/bin/systemctl restart apache2
+2026-07-11T13:48:47,ben,root,/usr/bin/apt update
+2026-07-11T14:46:21,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-11T15:05:51,j.maguire,root,/usr/bin/systemctl status ssh
+2026-07-11T15:29:38,ops,root,/usr/bin/journalctl -n 50
+2026-07-11T15:32:06,ops,root,/usr/bin/du -sh /var/log
+2026-07-11T17:32:04,deploy,root,/usr/bin/systemctl status ssh
+2026-07-11T18:25:50,alice,root,/usr/bin/du -sh /var/log
+2026-07-11T18:52:28,webadmin,root,/usr/bin/apt update
+2026-07-11T19:50:38,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-11T20:11:03,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-11T23:47:04,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-12T05:19:19,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-12T08:02:07,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-12T08:18:23,deploy,root,/usr/bin/apt update
+2026-07-12T08:30:39,ben,root,/usr/bin/apt update
+2026-07-12T08:39:31,deploy,root,/usr/bin/systemctl status ssh
+2026-07-12T09:00:44,ops,root,/usr/bin/du -sh /var/log
+2026-07-12T09:11:05,ops,root,/usr/bin/apt update
+2026-07-12T09:19:27,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-12T09:19:29,ben,root,/usr/bin/journalctl -n 50
+2026-07-12T10:03:34,ops,root,/usr/bin/systemctl status ssh
+2026-07-12T10:37:51,ben,root,/usr/bin/apt update
+2026-07-12T10:44:46,j.maguire,root,/usr/bin/systemctl status ssh
+2026-07-12T10:45:29,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-12T10:49:45,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-12T10:55:27,deploy,root,/usr/bin/systemctl restart apache2
+2026-07-12T11:26:28,j.maguire,root,/usr/bin/apt update
+2026-07-12T12:00:07,alice,root,/usr/bin/systemctl restart apache2
+2026-07-12T12:01:38,deploy,root,/usr/bin/journalctl -n 50
+2026-07-12T12:26:25,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-12T12:38:03,deploy,root,/usr/bin/systemctl status ssh
+2026-07-12T13:29:44,webadmin,root,/usr/bin/apt update
+2026-07-12T13:55:33,ben,root,/usr/bin/systemctl restart apache2
+2026-07-12T13:58:31,alice,root,/usr/bin/du -sh /var/log
+2026-07-12T14:01:20,webadmin,root,/usr/bin/du -sh /var/log
+2026-07-12T14:06:19,deploy,root,/usr/bin/du -sh /var/log
+2026-07-12T14:20:13,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-12T14:44:55,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-12T14:59:01,ben,root,/usr/bin/apt update
+2026-07-12T14:59:18,j.maguire,root,/usr/bin/apt update
+2026-07-12T15:22:57,alice,root,/usr/bin/apt update
+2026-07-12T16:06:39,ops,root,/usr/bin/du -sh /var/log
+2026-07-12T16:20:57,deploy,root,/usr/bin/systemctl status ssh
+2026-07-12T16:22:16,alice,root,/usr/bin/systemctl restart apache2
+2026-07-12T16:29:09,alice,root,/usr/bin/systemctl status ssh
+2026-07-12T17:01:04,ben,root,/usr/bin/journalctl -n 50
+2026-07-12T17:45:04,ben,root,/usr/bin/du -sh /var/log
+2026-07-12T17:55:14,webadmin,root,/usr/bin/journalctl -n 50
+2026-07-12T18:07:18,alice,root,/usr/bin/du -sh /var/log
+2026-07-12T18:09:12,j.maguire,root,/usr/bin/journalctl -n 50
+2026-07-12T18:22:52,deploy,root,/usr/bin/systemctl status ssh
+2026-07-12T18:34:27,j.maguire,root,/usr/bin/systemctl restart apache2
+2026-07-12T20:04:26,ops,root,/usr/bin/systemctl status ssh
+2026-07-12T22:12:54,webadmin,root,/usr/bin/systemctl status ssh

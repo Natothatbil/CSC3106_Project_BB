@@ -1,0 +1,13 @@
+event_type,count
+failed_password,3724
+accepted_password,1991
+invalid_user,1468
+conn_closed_preauth,1422
+session_opened,1133
+session_closed,1132
+max_auth_exceeded,443
+cron_activity,360
+sudo_command,292
+possible_breakin_warning,35
+unmatched_lines,0
+total_lines_in_file,12000

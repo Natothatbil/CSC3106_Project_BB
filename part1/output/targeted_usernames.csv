@@ -1,0 +1,11 @@
+username,failed_password_count,privileged_account
+deploy,428,True
+webadmin,340,True
+ops,212,True
+alice,204,False
+j.maguire,192,False
+ben,170,False
+mysql,132,False
+pi,127,False
+support,123,False
+postgres,120,False

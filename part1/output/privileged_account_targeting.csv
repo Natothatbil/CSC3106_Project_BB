@@ -1,0 +1,13 @@
+username,event_type,count
+deploy,accepted_password,332
+deploy,failed_password,428
+deploy,invalid_user,30
+ops,accepted_password,330
+ops,failed_password,212
+root,failed_password,109
+root,invalid_user,40
+sysadmin,failed_password,107
+sysadmin,invalid_user,88
+webadmin,accepted_password,345
+webadmin,failed_password,340
+webadmin,invalid_user,34
