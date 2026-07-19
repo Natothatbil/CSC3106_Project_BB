@@ -9,17 +9,20 @@ password, invalid user), so the sudo/CRON/session bookkeeping from Part 1 is
 left out. The regexes are copied verbatim from Part 1 rather than rewritten,
 so both parts count events identically - if the two scripts ever disagreed on
 what a "failed attempt" is, none of our cross-references would hold up.
+
+ASSUMED_YEAR, PRIVILEGED_USERS, and detect_burst_then_success are imported
+from part1/analysis.py rather than copied, since an independently-maintained
+duplicate of a constant or an algorithm is exactly the kind of thing that can
+silently drift between the two parts if one changes and the other doesn't.
 """
 
 import re
+import sys
 from datetime import datetime
+from pathlib import Path
 
-# Same assumption as Part 1: syslog timestamps carry no year, the extract is
-# one contiguous week, so a fixed year only affects printed labels.
-ASSUMED_YEAR = 2026
-
-# Same list as Part 1: accounts observed running privileged sudo commands.
-PRIVILEGED_USERS = {"root", "deploy", "webadmin", "ops", "sysadmin"}
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "part1"))
+from analysis import ASSUMED_YEAR, PRIVILEGED_USERS, detect_burst_then_success  # noqa: E402,F401
 
 IP_RE = r"(?P<ip>\d{1,3}(?:\.\d{1,3}){3})"
 

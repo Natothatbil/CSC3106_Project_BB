@@ -43,48 +43,31 @@ from collections import defaultdict, deque
 from datetime import timedelta
 from pathlib import Path
 
-from authlog_parsing import parse_auth_events, PRIVILEGED_USERS
+from authlog_parsing import parse_auth_events, PRIVILEGED_USERS, detect_burst_then_success
 
 
 def rule_burst_then_success(events, streak_threshold, burst_gap_minutes):
-    """R1: same burst logic as Part 1's build_brute_force_success, but framed
-    as an alert with a fire time (the moment of the successful login) so we
-    can talk about when a live system would have known."""
-    gap = timedelta(minutes=burst_gap_minutes)
-    by_ip = defaultdict(list)
-    for e in events:
-        if e["event_type"] in ("failed_password", "accepted_password"):
-            by_ip[e["ip"]].append(e)
-
-    alerts = []
-    for ip, evs in by_ip.items():
-        streak = 0
-        streak_start = None
-        last_failed_ts = None
-        for e in evs:
-            if e["event_type"] == "failed_password":
-                if streak == 0 or (last_failed_ts and e["timestamp"] - last_failed_ts > gap):
-                    streak = 0
-                    streak_start = e["timestamp"]
-                streak += 1
-                last_failed_ts = e["timestamp"]
-            else:  # accepted_password
-                if streak >= streak_threshold:
-                    alerts.append({
-                        "alert_time": e["timestamp"],
-                        "rule": "R1_burst_then_success",
-                        "severity": "CRITICAL",
-                        "source_ip": ip,
-                        "username": e["user"],
-                        "failed_count": streak,
-                        "window_start": streak_start,
-                        "detail": (f"successful login to '{e['user']}' after "
-                                   f"{streak} failed attempts from {ip} since "
-                                   f"{streak_start:%b %d %H:%M:%S}"),
-                    })
-                streak = 0
-                last_failed_ts = None
-    return alerts
+    """R1: thin wrapper around Part 1's detect_burst_then_success, framed as
+    an alert with a fire time (the moment of the successful login) so we can
+    talk about when a live system would have known. This reuses Part 1's
+    burst/streak computation directly rather than reimplementing it, so R1
+    cannot silently drift from the Part 1 finding it's meant to reproduce."""
+    findings = detect_burst_then_success(events, streak_threshold, burst_gap_minutes)
+    return [
+        {
+            "alert_time": f["success_time"],
+            "rule": "R1_burst_then_success",
+            "severity": "CRITICAL",
+            "source_ip": f["source_ip"],
+            "username": f["username"],
+            "failed_count": f["failed_count"],
+            "window_start": f["burst_start"],
+            "detail": (f"successful login to '{f['username']}' after "
+                       f"{f['failed_count']} failed attempts from {f['source_ip']} since "
+                       f"{f['burst_start']:%b %d %H:%M:%S}"),
+        }
+        for f in findings
+    ]
 
 
 def rule_high_volume_source(events, burst_threshold, burst_gap_minutes):

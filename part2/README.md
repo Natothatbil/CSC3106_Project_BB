@@ -45,9 +45,13 @@ run; rerunning overwrites it.
 
 Parsing is shared via `authlog_parsing.py`, which is a trimmed copy of the
 Part 1 parser (same regexes, verbatim) so Part 1 and Part 2 can never
-disagree about what counts as a failed attempt. Sanity check: `detector.py`'s
-R1 rule reproduces the Part 1 headline finding exactly - 117 failed attempts
-from 203.0.113.77, then `deploy` compromised at Jul 11 23:47:04.
+disagree about what counts as a failed attempt. The privileged-account list
+and the burst/streak detection logic behind R1 aren't copied at all, they're
+imported directly from `part1/analysis.py` (`PRIVILEGED_USERS`,
+`detect_burst_then_success`), so R1 can't quietly drift from the Part 1
+finding it's meant to reproduce. Sanity check: `detector.py`'s R1 rule
+reproduces the Part 1 headline finding exactly - 117 failed attempts from
+203.0.113.77, then `deploy` compromised at Jul 11 23:47:04.
 
 ## The detection rules, and why the thresholds are what they are
 

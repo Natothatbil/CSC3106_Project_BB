@@ -264,14 +264,23 @@ def build_privileged_targeting(events):
     return rows
 
 
-def build_brute_force_success(events, streak_threshold=BRUTE_FORCE_STREAK_THRESHOLD,
+def detect_burst_then_success(events, streak_threshold=BRUTE_FORCE_STREAK_THRESHOLD,
                                burst_gap_minutes=BURST_GAP_MINUTES):
-    """Detect, per source IP, successful logins preceded by a burst of failed
-    password attempts with no intervening success. Failed attempts are
-    grouped into a burst while the gap between consecutive attempts stays
-    within burst_gap_minutes; a larger gap starts a new burst. This is the
-    strongest evidence of an actual credential compromise (as opposed to
-    scanning/guessing that never succeeds)."""
+    """Shared core of the burst-then-success check: per source IP, find
+    successful logins preceded by a burst of failed password attempts with
+    no intervening success. Failed attempts are grouped into a burst while
+    the gap between consecutive attempts stays within burst_gap_minutes; a
+    larger gap starts a new burst. This is the strongest evidence of an
+    actual credential compromise (as opposed to scanning/guessing that never
+    succeeds).
+
+    Returns raw datetime objects rather than a report-ready row shape,
+    because part2/detector.py's R1 rule imports this directly and needs
+    datetimes for further alert-timing arithmetic; build_brute_force_success
+    below does the CSV-friendly formatting for Part 1's own output. Sharing
+    this function (rather than each part keeping its own copy of the
+    streak/gap logic) is what guarantees R1 can't quietly drift from the
+    Part 1 finding it's meant to reproduce."""
     gap = timedelta(minutes=burst_gap_minutes)
     by_ip = defaultdict(list)
     for e in events:
@@ -298,17 +307,36 @@ def build_brute_force_success(events, streak_threshold=BRUTE_FORCE_STREAK_THRESH
                     findings.append({
                         "source_ip": ip,
                         "username": e["user"],
-                        "failed_attempts_in_burst": streak,
+                        "failed_count": streak,
                         "distinct_usernames_in_burst": len(usernames_in_burst),
-                        "burst_start": streak_start.isoformat(),
-                        "success_time": e["timestamp"].isoformat(),
-                        "burst_span_seconds": int((last_failed_ts - streak_start).total_seconds()),
+                        "burst_start": streak_start,
+                        "last_failed_at": last_failed_ts,
+                        "success_time": e["timestamp"],
                     })
                 streak = 0
                 last_failed_ts = None
                 usernames_in_burst = set()
-    findings.sort(key=lambda r: r["failed_attempts_in_burst"], reverse=True)
+    findings.sort(key=lambda r: r["failed_count"], reverse=True)
     return findings
+
+
+def build_brute_force_success(events, streak_threshold=BRUTE_FORCE_STREAK_THRESHOLD,
+                               burst_gap_minutes=BURST_GAP_MINUTES):
+    """Report-ready wrapper around detect_burst_then_success, formatted for
+    this script's CSV output."""
+    findings = detect_burst_then_success(events, streak_threshold, burst_gap_minutes)
+    return [
+        {
+            "source_ip": f["source_ip"],
+            "username": f["username"],
+            "failed_attempts_in_burst": f["failed_count"],
+            "distinct_usernames_in_burst": f["distinct_usernames_in_burst"],
+            "burst_start": f["burst_start"].isoformat(),
+            "success_time": f["success_time"].isoformat(),
+            "burst_span_seconds": int((f["last_failed_at"] - f["burst_start"]).total_seconds()),
+        }
+        for f in findings
+    ]
 
 
 def build_sudo_commands(events):
